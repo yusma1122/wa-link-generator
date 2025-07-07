@@ -35,7 +35,7 @@ A simple yet powerful web application for creating WhatsApp links with pre-forma
 
 ## 🖥️ Demo
 
-![WhatsApp Link Generator Demo](https://via.placeholder.com/800x500/667eea/ffffff?text=WhatsApp+Link+Generator+Pro)
+![WhatsApp Link Generator Demo](https://yusma1122.github.io/wa-link-generator/)
 
 **[🔗 Live Demo](https://your-demo-link.com)** | **[📱 Mobile Preview](https://your-mobile-demo.com)**
 
@@ -173,7 +173,7 @@ Contributions are very welcome! Please read [CONTRIBUTING.md](docs/CONTRIBUTING.
 5. Create Pull Request
 
 ### **Contributors**
-- [Yusma Rahman](https://github.com/yusma-rahman) - Creator & Maintainer
+- [Yusma Rahman](https://github.com/yusma1122) - Creator & Maintainer
 
 ## 📝 Changelog
 
