@@ -106,19 +106,6 @@ wa-link-generator-pro/
 | **QR Server API** | QR Code generation | - |
 | **Web APIs** | Clipboard, Share, Storage | - |
 
-## 🔧 Customization
-
-### **Modify Message Templates**
-```javascript
-const templates = {
-    business: "Your business message...",
-    personal: "Your personal message...",
-    service: "Your service message...",
-    product: "Your product message...",
-    custom: "Your custom template..."
-};
-```
-
 ### **Change Theme Colors**
 ```css
 /* Change gradient background */
@@ -208,9 +195,8 @@ Contributions are very welcome! Please read [CONTRIBUTING.md](docs/CONTRIBUTING.
 ## 📞 Contact & Support
 
 - **Developer**: Yusma Rahman
-- **LinkedIn**: [linkedin.com/in/yusma-rahman](https://linkedin.com/in/yusma-rahman)
-- **Instagram**: [@yusma.rahman](https://instagram.com/yusma.rahman)
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
+- **LinkedIn**: [linkedin.com/in/yusmarahman09](https://www.linkedin.com/in/yusmarahman09/)
+- **Instagram**: [@yusmafrlnc](https://instagram.com/yusmafrlnc)
 
 ## 📄 License
 
@@ -253,6 +239,6 @@ SOFTWARE.
 
 **⭐ Star this repository if you found it helpful!**
 
-Made with ❤️ by [Yusma Rahman](https://github.com/yusma-rahman)
+Made with ❤️ by [Yusma Rahman](https://github.com/yusma1122)
 
 </div>
