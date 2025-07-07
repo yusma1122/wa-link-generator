@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WA Link Generator Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        .animate-slide-in {
+            animation: slideIn 0.3s ease-out;
+        }
+        
+        .animate-pulse-once {
+            animation: pulse 0.3s ease-out;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .qr-container {
+            background: linear-gradient(45deg, #f0f9ff, #e0f2fe);
+            border: 2px dashed #0ea5e9;
+        }
+    </style>
+</head>
+
+<body class="gradient-bg min-h-screen flex items-center justify-center p-4">
+    <div class="glass-effect p-8 rounded-2xl shadow-2xl w-full max-w-lg">
+        <div class="text-center mb-8">
+            <div class="flex justify-center items-center space-x-4 mb-4">
+                <a href="https://linkedin.com/in/yusmarahman09" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors" title="LinkedIn">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z" />
+                    </svg>
+                </a>
+                <div class="text-center">
+                    <h1 class="text-3xl font-bold text-gray-800">
+                        <span class="text-4xl"></span> WhatsApp Link <br> Generator Pro
+                    </h1>
+                    <p class="text-sm text-gray-600">by <span class="font-semibold text-blue-600">Yusma Rahman</span>
+                    </p>
+                </div>
+                <a href="https://instagram.com/yusmafrlnc/" target="_blank" class="text-pink-600 hover:text-pink-800 transition-colors" title="Instagram">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </a>
+            </div>
+            <p class="text-gray-600 text-sm">Buat link WhatsApp dengan mudah dan cepat</p>
+        </div>
+
+        <form id="waForm" class="space-y-6">
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                    📞 Nomor Tujuan
+                </label>
+                <div class="relative">
+                    <input id="nomor" type="text" placeholder="0812-3456-7890 atau 62812..." class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors duration-200" autocomplete="tel" />
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                        <span class="text-gray-400 text-sm" id="formatHint">ID: +62</span>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500 mt-1">Format: 08xxx atau 628xxx</p>
+            </div>
+
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                    💬 Pesan
+                </label>
+                <textarea id="pesan" rows="4" placeholder="Halo, saya ingin bertanya tentang..." class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none transition-colors duration-200 resize-none" maxlength="500"></textarea>
+                <div class="flex justify-between items-center mt-1">
+                    <p class="text-xs text-gray-500">Template pesan tersedia di bawah</p>
+                    <span class="text-xs text-gray-400" id="charCount">0/500</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2">
+                <button type="button" onclick="useTemplate('bisnis')" class="text-xs bg-purple-100 text-purple-700 py-2 px-3 rounded-lg hover:bg-purple-200 transition-colors">
+                    💼 Bisnis
+                </button>
+                <button type="button" onclick="useTemplate('personal')" class="text-xs bg-green-100 text-green-700 py-2 px-3 rounded-lg hover:bg-green-200 transition-colors">
+                    👋 Personal
+                </button>
+                <button type="button" onclick="useTemplate('layanan')" class="text-xs bg-blue-100 text-blue-700 py-2 px-3 rounded-lg hover:bg-blue-200 transition-colors">
+                    🛠️ Layanan
+                </button>
+                <button type="button" onclick="useTemplate('produk')" class="text-xs bg-orange-100 text-orange-700 py-2 px-3 rounded-lg hover:bg-orange-200 transition-colors">
+                    🛒 Produk
+                </button>
+            </div>
+
+            <button type="submit" class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-6 rounded-lg hover:from-green-600 hover:to-green-700 font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg">
+                🚀 Generate Link
+            </button>
+        </form>
+
+        <div id="output" class="mt-8 hidden animate-slide-in">
+            <div class="bg-gray-50 rounded-lg p-6 border-2 border-gray-200">
+                <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                    <span class="text-green-500 mr-2">✅</span> Link Berhasil Dibuat
+                </h3>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">🔗 Link WhatsApp:</label>
+                        <div class="flex items-center space-x-2">
+                            <a id="waLink" href="#" target="_blank" class="flex-1 text-blue-600 hover:text-blue-800 underline break-all text-sm bg-blue-50 p-2 rounded border"></a>
+                            <button onclick="copyLink()" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition-colors flex-shrink-0" title="Salin Link">
+                                📋
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <button onclick="openWhatsApp()" class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition-colors text-sm font-medium">
+                            💬 Buka WhatsApp
+                        </button>
+                        <button onclick="shareLink()" class="bg-purple-500 text-white py-2 px-4 rounded-lg hover:bg-purple-600 transition-colors text-sm font-medium">
+                            📤 Share
+                        </button>
+                    </div>
+
+                    <div class="qr-container p-4 rounded-lg text-center">
+                        <p class="text-sm font-medium text-gray-700 mb-3">📷 QR Code:</p>
+                        <img id="qrImage" class="mx-auto rounded-lg shadow-md max-w-[200px]" alt="QR Code" />
+                        <button onclick="downloadQR()" class="mt-3 bg-indigo-500 text-white py-1 px-3 rounded text-xs hover:bg-indigo-600 transition-colors">
+                            💾 Download QR
+                        </button>
+                    </div>
+
+                    <div class="flex justify-center space-x-3">
+                        <button onclick="generateNew()" class="bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600 transition-colors text-sm font-medium">
+                            🔄 Buat Baru
+                        </button>
+                        <button onclick="resetForm()" class="bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 transition-colors text-sm font-medium">
+                            🗑️ Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="notification" class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hidden animate-slide-in">
+            <span id="notificationText"></span>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-8 text-center text-gray-500 text-sm">
+            <div class="flex justify-center items-center space-x-4 mb-2">
+                <span>Created with ❤️ by <span class="font-semibold text-gray-700">Yusma Rahman</span></span>
+            </div>
+            <div class="flex justify-center items-center space-x-6">
+                <a href="https://linkedin.com/in/yusmarahman09" target="_blank" class="flex items-center space-x-1 text-blue-600 hover:text-blue-800 transition-colors">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z" />
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://instagram.com/yusmafrlnc/" target="_blank" class="flex items-center space-x-1 text-pink-600 hover:text-pink-800 transition-colors">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Template pesan
+        const templates = {
+            bisnis: "Halo, saya tertarik dengan produk/layanan Anda. Bisakah kita diskusi lebih lanjut?",
+            personal: "Halo! Apa kabar? Saya ingin berbicara dengan Anda.",
+            layanan: "Halo, saya membutuhkan informasi tentang layanan Anda. Apakah bisa dibantu?",
+            produk: "Halo, saya ingin menanyakan tentang produk yang Anda tawarkan. Terima kasih!"
+        };
+
+        let currentLink = '';
+
+        // Event listeners
+        document.getElementById('waForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            generateLink();
+        });
+
+        document.getElementById('nomor').addEventListener('input', function() {
+            validateAndFormatNumber(this);
+        });
+
+        document.getElementById('pesan').addEventListener('input', function() {
+            updateCharCount();
+        });
+
+        // Validasi dan format nomor
+        function validateAndFormatNumber(input) {
+            let value = input.value.replace(/\D/g, '');
+
+            // Auto-format dengan tanda hubung
+            if (value.length > 0) {
+                if (value.startsWith('0')) {
+                    value = value.replace(/^0/, '');
+                    if (value.length >= 3) {
+                        value = value.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
+                    }
+                    input.value = '0' + value;
+                } else if (value.startsWith('62')) {
+                    if (value.length >= 5) {
+                        value = value.replace(/^62(\d{3})(\d{4})(\d{4})/, '62$1-$2-$3');
+                    }
+                    input.value = value;
+                }
+            }
+        }
+
+        // Update jumlah karakter
+        function updateCharCount() {
+            const pesan = document.getElementById('pesan').value;
+            const count = pesan.length;
+            const charCountElement = document.getElementById('charCount');
+
+            charCountElement.textContent = `${count}/500`;
+
+            if (count > 450) {
+                charCountElement.classList.add('text-red-500');
+            } else {
+                charCountElement.classList.remove('text-red-500');
+            }
+        }
+
+        // Gunakan template
+        function useTemplate(type) {
+            const pesanField = document.getElementById('pesan');
+            pesanField.value = templates[type];
+            pesanField.focus();
+            updateCharCount();
+
+            // Animate template button
+            event.target.classList.add('animate-pulse-once');
+            setTimeout(() => {
+                event.target.classList.remove('animate-pulse-once');
+            }, 300);
+        }
+
+        // Generate link utama
+        function generateLink() {
+            const rawNomor = document.getElementById("nomor").value.trim();
+            const nomor = formatNomor(rawNomor);
+            const pesanRaw = document.getElementById("pesan").value.trim();
+            const pesan = encodeURIComponent(pesanRaw);
+
+            if (!nomor || !pesanRaw) {
+                showNotification("❌ Mohon isi nomor dan pesan terlebih dahulu!", "error");
+                return;
+            }
+
+            if (!isValidPhoneNumber(nomor)) {
+                showNotification("❌ Format nomor tidak valid. Gunakan format Indonesia.", "error");
+                return;
+            }
+
+            const fullLink = `https://wa.me/${nomor}?text=${pesan}`;
+            currentLink = fullLink;
+
+            document.getElementById("waLink").href = fullLink;
+            document.getElementById("waLink").textContent = fullLink;
+
+            // Generate QR Code
+            const qrLink = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(fullLink)}`;
+            document.getElementById("qrImage").src = qrLink;
+
+            document.getElementById("output").classList.remove("hidden");
+
+            // Scroll ke hasil
+            document.getElementById("output").scrollIntoView({
+                behavior: 'smooth'
+            });
+
+            showNotification("✅ Link WhatsApp berhasil dibuat!", "success");
+        }
+
+        // Validasi nomor telepon
+        function isValidPhoneNumber(nomor) {
+            // Nomor Indonesia harus dimulai dengan 62 dan memiliki 10-15 digit
+            const regex = /^62\d{9,13}$/;
+            return regex.test(nomor);
+        }
+
+        // Format nomor telepon
+        function formatNomor(nomor) {
+            let cleaned = nomor.replace(/\D/g, "");
+
+            if (cleaned.startsWith("0")) {
+                cleaned = "62" + cleaned.slice(1);
+            } else if (!cleaned.startsWith("62")) {
+                cleaned = "62" + cleaned;
+            }
+
+            return cleaned;
+        }
+
+        // Salin link
+        function copyLink() {
+            const text = document.getElementById("waLink").textContent;
+
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showNotification("📋 Link berhasil disalin!", "success");
+                }).catch(() => {
+                    fallbackCopyTextToClipboard(text);
+                });
+            } else {
+                fallbackCopyTextToClipboard(text);
+            }
+        }
+
+        // Fallback untuk copy text
+        function fallbackCopyTextToClipboard(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                document.execCommand('copy');
+                showNotification("📋 Link berhasil disalin!", "success");
+            } catch (err) {
+                showNotification("❌ Gagal menyalin link", "error");
+            }
+
+            document.body.removeChild(textArea);
+        }
+
+        // Buka WhatsApp
+        function openWhatsApp() {
+            if (currentLink) {
+                window.open(currentLink, '_blank');
+                showNotification("📱 Membuka WhatsApp...", "info");
+            }
+        }
+
+        // Share link
+        function shareLink() {
+            if (navigator.share && currentLink) {
+                navigator.share({
+                    title: 'WhatsApp Link',
+                    text: 'Link WhatsApp yang dibuat',
+                    url: currentLink,
+                }).then(() => {
+                    showNotification("📤 Berhasil dibagikan!", "success");
+                }).catch((error) => {
+                    copyLink(); // Fallback ke copy
+                });
+            } else {
+                copyLink(); // Fallback ke copy
+            }
+        }
+
+        // Download QR Code
+        function downloadQR() {
+            const qrImage = document.getElementById("qrImage");
+            if (qrImage.src) {
+                const link = document.createElement('a');
+                link.download = 'whatsapp-qr-code.png';
+                link.href = qrImage.src;
+                link.click();
+                showNotification("💾 QR Code berhasil diunduh!", "success");
+            }
+        }
+
+        // Generate baru (clear output, keep form)
+        function generateNew() {
+            document.getElementById("output").classList.add("hidden");
+            document.getElementById("nomor").focus();
+            showNotification("🔄 Siap untuk membuat link baru!", "info");
+        }
+
+        // Reset form
+        function resetForm() {
+            document.getElementById("nomor").value = "";
+            document.getElementById("pesan").value = "";
+            document.getElementById("waLink").textContent = "";
+            document.getElementById("waLink").href = "#";
+            document.getElementById("qrImage").src = "";
+            document.getElementById("output").classList.add("hidden");
+            updateCharCount();
+            currentLink = '';
+
+            document.getElementById("nomor").focus();
+            showNotification("🗑️ Form berhasil direset!", "info");
+        }
+
+        // Notification system
+        function showNotification(message, type = "info") {
+            const notification = document.getElementById("notification");
+            const notificationText = document.getElementById("notificationText");
+
+            notificationText.textContent = message;
+
+            // Reset classes
+            notification.className = "fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg animate-slide-in";
+
+            // Add type-specific classes
+            switch (type) {
+                case "success":
+                    notification.classList.add("bg-green-500", "text-white");
+                    break;
+                case "error":
+                    notification.classList.add("bg-red-500", "text-white");
+                    break;
+                case "info":
+                    notification.classList.add("bg-blue-500", "text-white");
+                    break;
+            }
+
+            notification.classList.remove("hidden");
+
+            // Hide after 3 seconds
+            setTimeout(() => {
+                notification.classList.add("hidden");
+            }, 3000);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCharCount();
+            document.getElementById("nomor").focus();
+        });
+    </script>
+</body>
+
+</html>
